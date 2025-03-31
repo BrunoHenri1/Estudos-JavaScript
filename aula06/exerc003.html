@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa</title>
+    <style>
+        body{
+            background-color: rgb(119, 119, 224);
+            color: white;
+            font: normal 20pt arial;
+        }
+        h1{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <p>Ja me livrei da Maldição</p>
+    <script>
+        // serve para fazer um comentario
+        /* serve para deixar como comentario
+        mais de uma linha
+         */
+        var n1 = Number.parseInt(prompt("Digite outro numero")) //recebe um valor string sem converter
+        var n2 = Number.parseInt(prompt("Digite outro numero")) //recebe um valor string sem converter
+        // colocando a opção number(n1) faz com que o JS faça a conversão sózinho só com a entrada de dados se é float ou int
+
+        //para converter para string basta só colocar String(n) ou n.toString()
+        var s = n1 + n2
+        alert(`A soma dos valores ${n1} + ${n2} é ${s}`) 
+        // + para adição (tornar a varial em number as duas variaveis)
+        // + para concatenação (quando for string)
+
+        s.length //quantos caracteres a String tem
+        s.toUpperCase() //tudo para "Maiúsculo"
+        s.toLowerCae() //tudo para "Minúsculo"
+    </script>
+</body>
+</html>
