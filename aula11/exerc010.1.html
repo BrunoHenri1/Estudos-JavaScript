@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nascionalidade</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    <p>Digite sua Nacionalidade</p>
+    <input type="text" name="nasci" id="nasci">
+    <input type="button" value="Pesquisar" onclick="pesquisar()">
+    <div id="res">
+        Resultado
+    </div>
+    
+    <script>
+        function pesquisar(){
+            var resp = document.getElementById("res");
+            var nasc = document.getElementById("nasci").value; 
+            
+            if (nasc === "Brasil") {
+                resp.innerText = "Você é Brasileiro";
+            } else {
+                resp.innerText = "Você é gringo";
+            }
+        }
+    </script>   
+    </script>   
+</body>
+</html>
