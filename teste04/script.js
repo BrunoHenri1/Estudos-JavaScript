@@ -1,0 +1,14 @@
+function adicionarTarefa() {
+    let inputTarefa = document.getElementById("inputTarefa")
+    let tarefa = inputTarefa.value
+    document.getElementById("mensagem").textContent = tarefa
+
+    let listaTarefas = document.getElementById("listaTarefas")
+    let novaTarefa = document.createElement("li")
+
+    novaTarefa.textContent = tarefa
+
+    listaTarefas.appendChild(novaTarefa)
+    
+    inputTarefa.value = ""
+}
