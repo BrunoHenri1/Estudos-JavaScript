@@ -1,29 +1,37 @@
-function adicionarTarefa() {
-        //Recebe o valor do usuario
-        let inputTarefa = document.getElementById("inputTarefa")
-        //atribui o valor do usuario a variavel tarefa e mostra em baixo
-        let Tarefa = inputTarefa.value.trim()
+let tarefas = []
 
-        let mensagem = document.getElementById("mensagem")
+function adicionarTarefa() {
+    
+    let inputTarefa = document.getElementById("inputTarefa")
+    let Tarefa = inputTarefa.value.trim()
+    let mensagem = document.getElementById("mensagem")
             
         
-        if (Tarefa == "") {
+    if (Tarefa == "") {
             let mensagemErro = "Erro voce não digitou nada"
             mensagem.textContent = mensagemErro;
-        } else {
-            //mostra a mensagem quando clica no botão
-            let mensagemSucesso = "Tarefa adicionada com sucesso!";
-            mensagem.textContent = mensagemSucesso;
+            mensagem.style.color = "red"
+    } else {
+            
+        let mensagemSucesso = "Tarefa adicionada com sucesso!";
+        mensagem.textContent = mensagemSucesso;
+        mensagem.style.color = "green"
 
-            //cria uma lista de tarefas (li) e atribui os valores numa lista não ordenada (ul)
-            let listaTarefas = document.getElementById("listaTarefas")
+        tarefas.push(Tarefa)
+        renderizarTarefas()
+    }
+
+    inputTarefa.value = ""
+}
+
+function renderizarTarefas() {
+        let listaTarefas = document.getElementById("listaTarefas")
+        listaTarefas.innerHTML = ""
+
+        let i = 0
+        for (i; i < tarefas.length; i++){
             let novaTarefa = document.createElement("li")
-             //as novas tarefas recebem o valor digitado do input
-            novaTarefa.textContent = Tarefa
-
-            //adiciona a tarefa na li
+            novaTarefa.textContent = tarefas[i]
             listaTarefas.appendChild(novaTarefa)
         }
-        //limpa o input do usuario
-        inputTarefa.value = ""
-    }
+}
