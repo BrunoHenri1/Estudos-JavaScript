@@ -1,8 +1,11 @@
-let numero = 3;
+let linha = 3;
+let coluna = 2;
+let asterisco = ''
 
-for (let i = numero; i >= 1; i--){
-    i = i + i
-    console.log(i)
-}
-
-
+    for (let i = 1; i <= coluna; i++){
+        asterisco += "*"
+        
+    }
+    for (let j = 1; j <= linha; j++){
+        console.log(asterisco)
+    }
