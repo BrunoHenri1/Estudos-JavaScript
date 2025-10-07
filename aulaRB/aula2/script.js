@@ -63,3 +63,10 @@ function editarTarefa(i){
         renderizarTarefas()
     }
 }
+
+function limparLista(){
+    tarefas.length = 0
+    renderizarTarefas()
+    let mensagem = document.getElementById("mensagem")
+    mensagem.textContent = "Lista de Tarefas limpa com Sucesso"
+}
