@@ -43,8 +43,13 @@ function renderizarTarefas() {
             botaoEditar.className = "editar"
             botaoEditar.textContent = "Editar"
             botaoEditar.onclick = () => editarTarefa(i)
-                
 
+            let botaoLimpar = document.createElement("button")
+            botaoLimpar.className = "botao_lista"
+            botaoLimpar.textContent = "Limpar Tudo"
+            botaoLimpar.onclick = () => limparLista()  
+
+            novaTarefa.appendChild(botaoLimpar)
             novaTarefa.appendChild(botaoRemover)
             novaTarefa.appendChild(botaoEditar)
             listaTarefas.appendChild(novaTarefa)
