@@ -1,6 +1,7 @@
 body{
     background: rgba(0, 0, 255, 0.7);
-    font: normal 15pt arial;
+    font-family: monospace;
+    font-size: 15px;
 }
 
 header{
@@ -15,6 +16,26 @@ section{
     width: 500px;
     margin: auto;
     box-shadow: 5px 5px 10px black;
+}
+#foto{
+    display: flex;
+    justify-self: center;
+}
+.botao{
+    display: flex;
+    justify-content: center;
+}
+
+#botao{
+    width: 400px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: rgba(0, 0, 255, 0.7);
+    font-family: monospace;
+    font-size: 15px;
+    color: white;
 }
 
 footer{
