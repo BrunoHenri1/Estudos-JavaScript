@@ -1,20 +1,37 @@
 let txt = document.getElementById('txt')
 let result = document.getElementById('result')
 
-
-let lista = []
-
 function adicionar(){
     let texto = txt.value;
+    
 
     if (texto === ''){
         alert("Digite uma tarefa para adicionar a lista")
-    } else {
-        lista.push(texto)
-        result.innerHTML += `<p>${texto}</p>`
-        txt.value = ''
-
-        let btn = document.createElement('button')
-        
     }
+    //botão para remover
+    let remover = document.createElement ("button")
+        remover.textContent = "Remover"
+    remover.addEventListener('click',function(){
+        result.removeChild(p)
+    })
+
+    //Botão Editar
+    let p = document.createElement ("p")
+        p.textContent = texto
+    let editar = document.createElement("button")
+        editar.textContent = "Editar"
+    editar.addEventListener('click', function(){
+        let novoTexto = prompt("Editar a tarefa")
+        if (novoTexto === ""){
+            alert("Digite uma tarefa para adicionar a lista")
+        }
+        p.textContent = novoTexto
+        p.appendChild(editar)
+        p.appendChild(remover)
+    })
+    p.appendChild(editar)
+    p.appendChild(remover)
+    result.appendChild(p)
+
+    txt.value = ''
 }
