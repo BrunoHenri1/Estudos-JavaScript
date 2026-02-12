@@ -1,0 +1,82 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fundo da página */
+body {
+    background-color: #e5e5e5;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Cartão principal */
+main {
+    width: 380px;
+    margin: 50px auto;
+    background-color: #f4b400;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+/* Título */
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    border-bottom: 4px solid black;
+    padding-bottom: 10px;
+}
+
+/* Parágrafos */
+p {
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="number"] {
+    width: 60%;
+    padding: 8px;
+    margin-left: 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: #e6e6e6;
+}
+
+/* Botão */
+input[type="button"] {
+    width: 80%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: black;
+    color: #f4b400;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="button"]:hover {
+    background-color: #333;
+}
+
+/* Resultado */
+#res {
+    margin-top: 25px;
+    background-color: black;
+    height: 120px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+    color: #f4b400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
