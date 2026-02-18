@@ -21,7 +21,7 @@ function calcular(){
     } else {
         classificação = "Obesidade grave"
     }
-
+    
     resul.textContent = `${n.value} seu IMC é ${imc.toFixed(2)}, voce esta com ${classificação}`;
     
 }
